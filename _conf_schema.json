@@ -47,7 +47,7 @@
         "type": "file",
         "default": [],
         "file_types": ["jpg", "jpeg", "png", "gif", "bmp", "webp", "txt"],
-        "hint": "上传抽取列表 list.txt(可选)和图片。<br>\n图片文件名需为 <老婆来源>!<老婆名字>.jpg (例如：游戏人生!白.jpg)，可使用 jpg/jpeg/png/gif/bmp/webp；未上传或删除 list.txt 时会自动按有效图片生成"
+        "hint": "上传抽取列表 list.txt(可选)和图片。\n图片文件名需为 <老婆来源>!<老婆名字>.jpg (例如：游戏人生!白.jpg)，可使用 jpg/jpeg/png/gif/bmp/webp；未上传或删除 list.txt 时会自动按有效图片生成"
     },
     "wife_message_template": {
         "description": "抽老婆结果文案",
