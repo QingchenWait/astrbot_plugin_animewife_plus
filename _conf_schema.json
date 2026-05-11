@@ -1,0 +1,70 @@
+{
+    "need_prefix": {
+        "description": "启用触发前缀",
+        "type": "bool",
+        "hint": "启用后需要前缀 (@机器人) 来触发指令",
+        "default": false
+    },
+    "change_max_per_day": {
+        "description": "每天换老婆最大次数",
+        "type": "int",
+        "default": 5,
+        "hint": "每天最多更换老婆的次数"
+    },
+    "swap_max_per_day": {
+        "description": "交换老婆功能每天可使用次数",
+        "type": "int",
+        "default": 0,
+        "hint": "每天可以交换老婆的次数"
+    },
+    "reset_max_uses_per_day": {
+        "description": "重置功能每天可使用次数",
+        "type": "int",
+        "default": 2,
+        "hint": "每天可以使用重置功能的次数"
+    },
+    "reset_success_rate": {
+        "description": "重置功能成功率",
+        "type": "float",
+        "default": 0.30,
+        "hint": "重置功能的成功率，取值范围 [0, 1]"
+    },
+    "reset_mute_duration": {
+        "description": "重置失败时禁言时长（秒）",
+        "type": "int",
+        "default": 300,
+        "hint": "重置失败后禁言时长，单位秒"
+    },
+    "wife_pool_source": {
+        "description": "老婆池来源",
+        "type": "string",
+        "default": "优先从本地上传",
+        "options": ["优先从链接在线读取", "优先从本地上传"],
+        "hint": "选择在线优先时，从下面配置的 URL 在线加载老婆池；选择本地优先时，从下方上传的独立本地老婆池抽取，本地池为空才回退原始逻辑"
+    },
+    "local_wife_pool_files": {
+        "description": "本地老婆池图片集",
+        "type": "file",
+        "default": [],
+        "file_types": ["jpg", "jpeg", "png", "gif", "bmp", "webp", "txt"],
+        "hint": "上传抽取列表 list.txt(可选)和图片。<br>\n图片文件名需为 <老婆来源>!<老婆名字>.jpg (例如：游戏人生!白.jpg)，可使用 jpg/jpeg/png/gif/bmp/webp；未上传或删除 list.txt 时会自动按有效图片生成"
+    },
+    "wife_message_template": {
+        "description": "抽老婆结果文案",
+        "type": "text",
+        "default": "<user_name>，你今天的老婆是来自<place>的<wife_name>，请好好珍惜哦~",
+        "hint": "支持通配符：<user_name> 表示用户昵称，<place> 表示老婆来源，<wife_name> 表示老婆名字"
+    },
+    "image_base_url": {
+        "description": "在线老婆池图片服务器基础 URL",
+        "type": "string",
+        "default": "https://raw.githubusercontent.com/monbed/wife/main/",
+        "hint": "用于拼接图片链接的基础地址"
+    },
+    "image_list_url": {
+        "description": "在线老婆池图片列表 URL",
+        "type": "string",
+        "default": "https://animewife.dpdns.org/list.txt",
+        "hint": "用于获取图片文件名列表的地址"
+    }
+}
